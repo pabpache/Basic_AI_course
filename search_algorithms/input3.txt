@@ -1,0 +1,12 @@
+#No solution because of domain constraints
+#task definition
+task, t1 4
+task, t2 6
+task, t3 1
+#binary constraints
+constraint, t2 after t3
+#domain constraint
+domain, t3 11am
+domain, t3 starts-before 10am
+#soft deadline
+domain, t1 ends-by wed 10am 9

@@ -1,0 +1,24 @@
+#Sequence of task according to the restrictions
+#definition if the tasks (the order of declaration will be not alphabetical to check order as well)
+task, t8 5
+task, t7 5
+task, t6 3
+task, t5 4
+task, t4 4
+task, t3 5
+task, t2 3
+task, t1 5
+#binary constraints
+constraint, t8 after t7
+constraint, t7 after t6
+constraint, t6 after t5
+constraint, t5 same-day t4
+constraint, t5 starts-at t4
+constraint, t1 before t2
+constraint, t2 before t3
+constraint, t3 before t4 
+#domain constraint
+domain, t1 ends-after 5pm
+#soft deadlines 
+domain, t4 ends-by tue 10am 2
+domain, t6 ends-by tue 10am 4

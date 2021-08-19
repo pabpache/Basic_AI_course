@@ -1,0 +1,14 @@
+#Unique solution
+#task definition
+task, t1 6
+task, t2 2
+task, t3 3
+#binary constraints
+constraint, t2 after t1 
+#domain constraint
+domain, t2 starts-in wed 12pm-fri 11am
+domain, t1 starts-after wed 11am
+domain, t3 tue
+#soft deadlines
+domain, t2 ends-by thu 9am 7
+domain, t3 ends-by tue 10am 8

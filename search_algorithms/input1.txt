@@ -1,0 +1,14 @@
+# scenario where the binary constraints cannot be met together. Therefore there is no solution
+#definition of the tasks
+task, t1 2
+task, t2 5
+task, t3 7
+task, t4 4
+# three binary constraints (the first two constraints cannot be met together
+constraint, t2 same-day t3 
+constraint, t2 starts-at t3
+constraint, t1 after t4
+# domain constraint 
+domain, t1 starts-before wed 10am
+# soft deadlines
+domain, t4 ends-by tue 1pm 14 
